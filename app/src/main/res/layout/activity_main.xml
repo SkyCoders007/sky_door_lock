@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|left"
+            android:background="@drawable/button_background2"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <DigitalClock
+                android:id="@+id/digital_clock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="20dp"
+                />
+            </LinearLayout>
+        <LinearLayout
+            android:id="@+id/dateheader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical|right"
+            android:padding="15dp"
+            >
+            <TextView
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textColor="#ffffff"
+                android:textSize="20dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginTop="55dp">
+            <Button
+                android:id="@+id/btnForgot"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="@drawable/button_background"
+                android:textColor="#FF0000"
+                android:text="Forgot pattern"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <com.propheticapps.halloweenapplocktheme.utils.Lock9View
+            android:id="@+id/lock_9_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:lineColor="#FFCC00"
+            app:lineWidth="8dp" />
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:background="@drawable/button_background2"
+            android:gravity="center"
+            android:textSize="40dp"
+            android:textColor="#ffffff"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

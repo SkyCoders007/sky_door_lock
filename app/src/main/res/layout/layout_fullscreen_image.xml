@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/full">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical|left"
+        android:background="#000044">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Lockscrenn Wallpaper"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="fill_vertical"
+        android:layout_below="@+id/header"
+        android:layout_above="@+id/bottom"
+        android:background="#ffffff"
+        >
+    <com.propheticapps.halloweenapplocktheme.utils.TouchImageView
+        android:id="@+id/imgDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#000044"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal|center"
+        android:padding="5dp"
+        >
+        <Button
+            android:id="@+id/setWall"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Set lockscreen wallpaper"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:padding="9dp"
+            android:background="@drawable/ripple"
+            android:layout_marginRight="4dp"
+            />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </RelativeLayout>

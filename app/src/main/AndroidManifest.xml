@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.propheticapps.halloweenapplocktheme" >
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/applock_256"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.HomeScreen"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.ChangeActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.ActivityStart"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.propheticapps.halloweenapplocktheme.Activity.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:excludeFromRecents="true"
+            android:theme="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden">
+                     <intent-filter>
+                             <category android:name="android.intent.category.HOME" />
+                     </intent-filter>>
+        </activity>
+
+        <activity
+            android:name="com.propheticapps.halloweenapplocktheme.Activity.ChangeTheme"
+            android:theme="@android:style/Theme.Dialog"/>
+
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.ChangeWallpaper"
+            android:theme="@android:style/Theme.Dialog"/>
+
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.FullScreenImage"
+            android:theme="@android:style/Theme.Dialog"/>
+
+        <activity android:name="com.propheticapps.halloweenapplocktheme.Activity.ChangeActivity2"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:screenOrientation="portrait"/>
+
+        <service android:name="com.propheticapps.halloweenapplocktheme.Service.LockScreenService" />
+
+        <receiver
+            android:name="com.propheticapps.halloweenapplocktheme.Service.LockScreenReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

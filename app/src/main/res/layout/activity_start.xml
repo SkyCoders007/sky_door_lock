@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/themebg"
+    android:orientation="vertical"
+    android:id="@+id/lan">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/button_background2"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@mipmap/applock_256"
+            android:layout_marginLeft="14dp"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Halloween-Applock theme"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center|right"
+            android:padding="10dp"
+            >
+            <Button
+                android:id="@+id/btnRate"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="17dp"
+                android:background="@mipmap/rate_button" />
+
+            <Button
+                android:id="@+id/btnShare"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@mipmap/share_button" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:padding="40dp">
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Set up new pattern"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:background="@drawable/ripple"/>
+        <Button
+            android:id="@+id/btnChange"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Change pattern lock theme"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/ripple"/>
+        <Button
+            android:id="@+id/btnChangeWall"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Change lock wallpaper"
+            android:textColor="#ffffff"
+            android:textSize="15dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/ripple"/>
+        <Button
+            android:id="@+id/close"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Close"
+            android:textSize="15dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/ripple"/>
+    </RelativeLayout>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>
